@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
+import Header from "@/components/Header";
+import { SanityLive } from "@/sanity/lib/live";
 
 export const metadata: Metadata = {
   title: "Patreon Reimagined",
@@ -16,8 +18,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
+          <Header />
           {children}
         </body>
+
+        <SanityLive />
       </html>
     </ClerkProvider>
   );
