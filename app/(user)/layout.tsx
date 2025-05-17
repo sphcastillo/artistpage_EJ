@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
 import Header from "@/components/Header";
 import { SanityLive } from "@/sanity/lib/live";
+import OurSchematicProvider from "@/components/Schematic/OurSchematicProvider";
 
 export const metadata: Metadata = {
   title: "Patreon Reimagined",
@@ -17,12 +18,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <OurSchematicProvider>
         <body>
           <Header />
           {children}
         </body>
 
         <SanityLive />
+        </OurSchematicProvider>
       </html>
     </ClerkProvider>
   );
