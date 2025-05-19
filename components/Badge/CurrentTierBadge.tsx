@@ -15,4 +15,4 @@ function CurrentTierBadge() {
     
     return <Badge variant='interactive' tier={tierAccess} link='/pricing' />
 }
-export default CurrentTierBadge
+export default CurrentTierBadge;
