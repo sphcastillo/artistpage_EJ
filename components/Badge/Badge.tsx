@@ -15,7 +15,7 @@ function Badge({ variant = "simple", tier, link, className }: BadgeProps) {
   const label = membershipMap[level];
   const badgeColor = getBadgeColor(level);
 
-  if ((variant = "interactive")) {
+  if ((variant === "interactive")) {
     return <Link 
         href={link || ""} 
         className={`

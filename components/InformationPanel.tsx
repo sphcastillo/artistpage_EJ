@@ -6,8 +6,6 @@ import { getSiteSettings } from "@/sanity/lib/siteSettings/getSiteSettings";
 import Image from "next/image";
 import MemberButton from "./MemberButton";
 import { getPosts } from "@/sanity/lib/post/getPosts";
-// import MemberButton from "./MemberButton";
-// import { getPosts } from "@/sanity/lib/post/getPosts";
 
 async function InformationPanel() {
   const siteSettings = await getSiteSettings();
