@@ -2,7 +2,6 @@ import { GetPostsQueryResult } from "@/sanity.types";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { Lock, MessageCircleIcon } from "lucide-react";
-
 import Link from "next/link";
 import CreatedAt from "./CreatedAt";
 import TierBadge from "./Badge/TierBadge";

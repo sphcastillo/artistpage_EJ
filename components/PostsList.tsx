@@ -29,4 +29,4 @@ async function PostsList({ posts }: { posts: GetPostsQueryResult }) {
         </section>
     )
 }
-export default PostsList
+export default PostsList;
