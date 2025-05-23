@@ -1,8 +1,10 @@
 import { GetPostsQueryResult } from "@/sanity.types"
 import { getSiteSettings } from "@/sanity/lib/siteSettings/getSiteSettings"
-import FilterByTierSelect from "./FilterByTierSelect";
+
 import { ClerkLoaded } from "@clerk/nextjs";
 import Post from "./Post";
+import FilterByTierSelect from "../FilterByTierSelect";
+
 
 async function PostsList({ posts }: { posts: GetPostsQueryResult }) {
     const siteSettings = await getSiteSettings();

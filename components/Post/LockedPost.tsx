@@ -3,8 +3,9 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { Lock, MessageCircleIcon } from "lucide-react";
 import Link from "next/link";
-import CreatedAt from "./CreatedAt";
-import TierBadge from "./Badge/TierBadge";
+import TierBadge from "../Badge/TierBadge";
+import CreatedAt from "../CreatedAt";
+
 
 
 function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {

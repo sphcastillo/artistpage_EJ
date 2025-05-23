@@ -6,12 +6,12 @@ import { TierAccess, tierMap } from "@/types/types";
 import { PortableText } from "@portabletext/react";
 import TimeAgo from "react-timeago";
 import { useUser } from "@clerk/nextjs";
-import LockedPost from "./LockedPost";
 import Link from "next/link";
 import Image from "next/image";
-import Badge from "./Badge/Badge";
 import { urlFor } from "@/sanity/lib/image";
 import { MessageCircleIcon } from "lucide-react";
+import LockedPost from "./LockedPost";
+import Badge from "../Badge/Badge";
 
 function Post({ post }: { post: GetPostsQueryResult[number] }) {
   const membershipTier = useMembershipTier();

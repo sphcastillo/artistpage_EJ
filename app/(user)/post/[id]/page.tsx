@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
+import Comments from "@/components/Comments";
 
 async function PostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -78,7 +79,7 @@ async function PostPage({ params }: { params: Promise<{ id: string }> }) {
       <hr />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
-        {/* <Comments post={post} /> */}
+        <Comments post={post} />
       </div>
     </main>
   )
