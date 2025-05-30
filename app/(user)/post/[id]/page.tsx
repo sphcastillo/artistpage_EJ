@@ -20,11 +20,12 @@ async function PostPage({ params }: { params: Promise<{ id: string }> }) {
         <div className="relative h-[50vh] w-full bg-gray-100">
           {/* Blurred background */}
           <div className="absolute inset-0 overflow-hidden">
-            <Image
+          <Image
               src={urlFor(post.coverImage).url()}
-              alt={post.coverImage.alt || post.title || "Post cover image"}
-              fill
-              className="object-cover blur-md scale-105 brightness-90"
+              alt={post.coverImage?.alt || post.title || "Post cover image"}
+              width={1920}
+              height={1080}
+              className="absolute inset-0 w-full h-full object-cover blur-md scale-105 brightness-90"
               priority
             />
           </div>
@@ -32,11 +33,12 @@ async function PostPage({ params }: { params: Promise<{ id: string }> }) {
           {/* Clear centered image */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative w-full max-w-3xl h-full max-h-[400px] mx-4">
-              <Image
+            <Image
                 src={urlFor(post.coverImage).url()}
-                alt={post.coverImage.alt || post.title || "Post cover image"}
-                fill
-                className="object-contain"
+                alt={post.coverImage?.alt || post.title || "Post cover image"}
+                width={1200}
+                height={800}
+                className="absolute inset-0 w-full h-full object-contain"
                 priority
               />
             </div>

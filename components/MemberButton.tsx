@@ -15,9 +15,9 @@ function MemberButton() {
   if (!membershipTier)
     return (
       <Link href="/pricing">
-        <Button className="bg-gray-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-gray-700 transition-colors">
-          Loading...
-          <Loader2 className="w-4 h-4 animate-spin text-white" />
+        <Button className="cursor-pointer bg-gray-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-gray-700 transition-colors">
+          Get a Membership now!
+          {/* <Loader2 className="w-4 h-4 animate-spin text-white" /> */}
         </Button>
       </Link>
     );

@@ -12,10 +12,25 @@ import { urlFor } from "@/sanity/lib/image";
 import { MessageCircleIcon } from "lucide-react";
 import LockedPost from "./LockedPost";
 import Badge from "../Badge/Badge";
+import { useEffect, useState } from "react";
 
 function Post({ post }: { post: GetPostsQueryResult[number] }) {
   const membershipTier = useMembershipTier();
   const { user } = useUser();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm relative animate-pulse h-64">
+        {/* Skeleton */}
+        <div>setting client </div>
+      </div>
+    );
+  }
 
   const postMembershipLevel = tierMap[post.tierAccess as TierAccess];
   const isLocked = membershipTier && membershipTier < postMembershipLevel;

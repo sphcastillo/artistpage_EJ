@@ -22,7 +22,7 @@ function useMembershipTier() : MembershipLevel | null {
   const router = useRouter();
 
   
-  const hasBackstageContent = useSchematicFlag('backstage-content');
+  const hasBackstageContent = useSchematicFlag('backstage-content'); 
   const hasCrewContent = useSchematicFlag('crew-member-access-content');
   const hasVIPContent = useSchematicFlag('vip-access-content');
 
@@ -35,7 +35,7 @@ function useMembershipTier() : MembershipLevel | null {
 
         // You can update UI, refresh data, or trigger other actions here
         // For example, you might want to refetch user entitlements
-        router.refresh();
+        window.location.reload(); 
     };
 
     window.addEventListener('plan-changed', handlePlanChanged as EventListener);

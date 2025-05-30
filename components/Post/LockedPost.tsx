@@ -20,11 +20,13 @@ function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {
                 <Lock className="w-12 h-12 text-white" />
               </div>
               <Image
-                src={urlFor(post.coverImage).url()}
-                alt={post.coverImage.alt || post.title || "Post cover image"}
-                fill
-                className="object-contain blur-sm"
-              />
+              src={urlFor(post.coverImage).url()}
+              alt={post.coverImage?.alt || post.title || "Post cover image"}
+              className="absolute inset-0 w-full h-full object-contain blur-sm"
+              width={1280}
+              height={720}
+              priority
+            />
             </div>
           )}
   

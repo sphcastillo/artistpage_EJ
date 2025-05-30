@@ -4,6 +4,9 @@ import "../globals.css";
 import Header from "@/components/Header";
 import { SanityLive } from "@/sanity/lib/live";
 import OurSchematicProvider from "@/components/Schematic/OurSchematicProvider";
+import { Toaster } from "sonner";
+import { Button } from "@/components/ui/button";
+import DirectMessageButton from "@/components/DirectMessageButton";
 
 export const metadata: Metadata = {
   title: "Patreon Reimagined",
@@ -22,6 +25,12 @@ export default function RootLayout({
         <body>
           <Header />
           {children}
+
+          <div className="fixed bottom-4 right-4">
+            <DirectMessageButton />
+          </div>
+
+          <Toaster position="bottom-center"/>
         </body>
 
         <SanityLive />

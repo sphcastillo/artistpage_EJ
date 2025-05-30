@@ -9,6 +9,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "./ui/button";
 import { Loader2, Send } from "lucide-react";
+import addComment from "@/actions/addComment";
+import TimeAgo from "react-timeago";
 
 function Comments({ post }: { post: GetPostQueryResult }) {
   const [comment, setComment] = useState("");
@@ -27,7 +29,7 @@ function Comments({ post }: { post: GetPostQueryResult }) {
       const text = comment;
       try {
         setComment("");
-        // await addComment(id, text);
+        await addComment(id, text);
       } catch (error) {
         console.error(error);
         setComment(text);
@@ -75,21 +77,55 @@ function Comments({ post }: { post: GetPostQueryResult }) {
               className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[80px]"
             />
             <div className="flex justify-end mt-2">
-                <Button
-                    type="submit"
-                    disabled={!user || !hasCommentFeature || isCommenting}
-                    className='ml-auto'
-                >
-                    {isCommenting ? (
-                        <Loader2  className="h-5 w-5 animate-spin"/>
-                    ) : (
-                        <Send className='h-5 w-f' />
-                    )}
-                </Button>
+              <Button
+                type="submit"
+                disabled={!user || !hasCommentFeature || isCommenting}
+                className="ml-auto"
+              >
+                {isCommenting ? (
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                ) : (
+                  <Send className="h-5 w-f" />
+                )}
+              </Button>
             </div>
           </div>
         </div>
       </form>
+
+      <div className="space-y-4">
+        {post?.comments.length === 0 && (
+          <p className="text-gray-500 text-center py-4">
+            No comments yet. Be the first to share your thoughts!
+          </p>
+        )}
+
+        {post?.comments.map((comment) => (
+          <div
+            key={comment._id}
+            className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm"
+          >
+            <Avatar>
+              <AvatarImage src={comment.userImageUrl} />
+              <AvatarFallback>
+                {comment.name?.charAt(0)}
+                {comment.name?.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
+            <div className="flex-1">
+              <div className="flex items-baseline gap-2">
+                <h4 className="font-medium text-gray-900">{comment.name}</h4>
+                {comment._createdAt && (
+                  <span className="text-xs text-gray-500">
+                    <TimeAgo date={comment._createdAt}/>
+                  </span>
+                )}
+              </div>
+              <p className="text-gray-700 mt-1">{comment.comment}</p>
+            </div>
+          </div>
+        ))} 
+      </div>
     </div>
   );
 }

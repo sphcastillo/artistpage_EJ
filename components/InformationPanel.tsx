@@ -1,5 +1,3 @@
-// import { SocialPlatform } from "@/lib/socialToIcon";
-// import { getSocialIcon } from "@/lib/socialToIcon";
 import { getSocialIcon, SocialPlatform } from "@/lib/socialToIcon";
 import { urlFor } from "@/sanity/lib/image";
 import { getSiteSettings } from "@/sanity/lib/siteSettings/getSiteSettings";
@@ -10,7 +8,7 @@ import { getPosts } from "@/sanity/lib/post/getPosts";
 async function InformationPanel() {
   const siteSettings = await getSiteSettings();
 
-    const posts = await getPosts();
+  const posts = await getPosts();
 
   return (
     <div className="flex flex-col items-center justify-center max-w-2xl mx-auto py-8 px-4 space-y-4">
@@ -21,7 +19,7 @@ async function InformationPanel() {
           alt="Logo"
           width={175}
           height={175}
-          className="rounded-lg z-50"
+          className="w-[175px] h-auto rounded-lg z-50"
         />
       )}
 
