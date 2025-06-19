@@ -18,7 +18,7 @@ function Comments({ post }: { post: GetPostQueryResult }) {
   const { user } = useUser();
   const [isCommenting, startTransition] = useTransition();
 
-  const hasCommentFeature = membershipTier && membershipTier >= tierMap.crew;
+  const hasCommentFeature = membershipTier && membershipTier >= tierMap.sunsetCircle;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
