@@ -11,7 +11,7 @@ async function PostsList({ posts }: { posts: GetPostsQueryResult }) {
 
     return (
         <section className="my-8 px-4">
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-7xl">
                 <h2 className="text-2xl font-bold mb-8 text-center">
                     Recent Posts by {siteSettings?.siteTitle}
                 </h2>
@@ -20,7 +20,7 @@ async function PostsList({ posts }: { posts: GetPostsQueryResult }) {
                     <FilterByTierSelect />
                 </div>
 
-                <div className="grid grid-cols-1 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <ClerkLoaded>
                         {posts.map((post, index) => (
                             <Post key={index} post={post} />

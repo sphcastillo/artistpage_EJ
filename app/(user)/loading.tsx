@@ -14,7 +14,7 @@ async function Loading() {
           width={100}
           height={100}
           priority
-          className="h-32 w-32 rounded-full animate-pulse"
+          className="h-32 w-32 object-center object-contain rounded-full animate-pulse"
         />
       )}
     </div>

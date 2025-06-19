@@ -43,7 +43,7 @@ async function Header() {
           <Button
             asChild
             variant="outline"
-            className="px-4 py-2 bg-red-500 text-white rounded-lg"
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg"
           >
             <div>
               <SignInButton mode="modal" />

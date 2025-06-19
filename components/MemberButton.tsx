@@ -25,8 +25,8 @@ function MemberButton() {
   if (membershipTier === 1) {
     return (
       <Link href="/pricing">
-        <Button className="bg-red-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-red-700 transition-colors">
-          Become a Member <Heart className="w-4 h-4 fill-white text-white" />
+        <Button className="bg-orange-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-orange-700 transition-colors">
+          Become a Paid Member <Heart className="w-4 h-4 fill-white text-white" />
         </Button>
       </Link>
     );
