@@ -12,7 +12,7 @@ function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {
     return (
       <Link href="/pricing">
         <article
-          className={`bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 group cursor-pointer relative`}
+          className={`bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 group cursor-pointer relative h-[600px] flex flex-col`}
         >
           {post.coverImage?.asset && (
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-lg rel">
@@ -36,7 +36,7 @@ function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {
             </div>
           )}
   
-          <div className="p-6">
+          <div className="p-6 flex flex-col flex-1">
             <h2 className="text-xl font-semibold text-gray-900 mb-2">
               {post.title}
             </h2>
@@ -57,7 +57,7 @@ function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {
   
               <div className="blur-[6px] text-gray-600 prose opacity-75 relative z-20">
                 {post.body && (
-                  <div className="h-fit overflow-hidden">
+                  <div className="h-fit overflow-hidden line-clamp-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Nice try hacking the site but you are not getting in. :D Lorem
@@ -77,7 +77,7 @@ function LockedPost({ post }: { post: GetPostsQueryResult[number] }) {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-4">
+            <div id='locked-post-footer' className="flex items-center justify-between mt-auto">
               <div className="text-sm text-gray-500 text-right border border-gray-200 rounded-full px-4 py-1 flex items-center gap-2">
                 <MessageCircleIcon className="w-4 h-4" />
                 {post.comments?.length} comments

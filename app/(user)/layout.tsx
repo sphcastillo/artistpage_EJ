@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import DirectMessageButton from "@/components/DirectMessageButton";
 
 export const metadata: Metadata = {
-  title: "Patreon Reimagined",
-  description: "A reimagined Patreon experience - built for creators, by this creator. Join me on this journey to create a better platform for creators and their communities.",
+  title: "Erin Jade's Artist Page",
+  description: "Disclaimer: This artist page is a creative and educational project inspired by the work of Erin Jade. While Erin Jade is a real and immensely talented artist, this page is not created, managed, or officially affiliated with her. All content is for educational and demonstration purposes only and should not be interpreted as representing Erin Jade or her personal brand.",
 };
 
 export default function RootLayout({

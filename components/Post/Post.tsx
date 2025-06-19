@@ -23,14 +23,14 @@ function Post({ post }: { post: GetPostsQueryResult[number] }) {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    return (
-      <div className="bg-white rounded-lg shadow-sm relative animate-pulse h-64">
-        {/* Skeleton */}
-        <div>setting client </div>
-      </div>
-    );
-  }
+  // if (!isClient) {
+  //   return (
+  //     <div className="bg-white rounded-lg shadow-sm relative animate-pulse h-64">
+  //       {/* Skeleton */}
+  //       <div>setting client </div>
+  //     </div>
+  //   );
+  // }
 
   const postMembershipLevel = tierMap[post.tierAccess as TierAccess];
   const isLocked = membershipTier && membershipTier < postMembershipLevel;
@@ -65,8 +65,8 @@ function Post({ post }: { post: GetPostsQueryResult[number] }) {
   if (isLocked) return <LockedPost post={post} />;
 
   return (
-    <Link href={`/post/${post._id}`}>
-      <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 group cursor-pointer relative">
+    <Link id='individual-post' href={`/post/${post._id}`}>
+      <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 group cursor-pointer relative h-[600px]">
         {post.coverImage?.asset && (
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-lg">
             <Image
@@ -91,7 +91,7 @@ function Post({ post }: { post: GetPostsQueryResult[number] }) {
           </h2>
 
           {post.body && (
-            <div className="text-gray-600 prose">
+            <div className="text-gray-600 prose line-clamp-6">
               <PortableText value={post.body} />
             </div>
           )}
