@@ -1,18 +1,34 @@
-##TIER NAMES 
-Ripple Supporter - 
-Tiny waves, big impact  
-$3/month
+# Erin Jade's Artist Page
 
-“You’re the ripple that helps the tide rise. Thank you.”
+## Description
 
-Sunset Circle - 
-Community & inspiration
-$8/month
+This is a full-stack artist profile project built using Next.js App Router and Sanity.io as a headless CMS. Inspired by platforms like Patreon, this project demonstrates how an artist can share their work, connect with supporters, and offer membership tiers—all within a beautifully designed, dynamic web experience.
 
-“We share the same horizon. Let’s watch the colors change together.”
+## Requirements
+Sanity account, Stripe account, Clerk account
 
-Electric Collective - 
-Creative intimacy + deeper connection
-$20/month
+## Technologies & Methods Used
+Next.js, TypeScript, TailwindCSS, Sanity CMS, Clerk, Schematic, Stripe
 
-“This is for those who move with the art—who feel it, name it, and help it grow.”
+## Github Repository
+https://github.com/sphcastillo/artistpage_EJ
+
+## Deployed Site
+https://patreon-reimagined.vercel.app/
+
+## More info
+
+Please Note: This project is for educational and demonstration purposes only. It is not created, maintained, or affiliated with Erin Jade.
+All artistic content and written narratives are conceptual and used here solely to showcase the technical functionality of the platform.
+
+Author: Sophia Castillo,
+Email: sophia@builtbysophia.com,
+
+Professional website: https://www.builtbysophia.com,
+GitHub: https://github.com/sphcastillo,
+LinkedIn: https://www.linkedin.com/in/sophiacastillo-ca/
+
+
+
+
+
