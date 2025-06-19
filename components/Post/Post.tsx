@@ -73,6 +73,7 @@ function Post({ post }: { post: GetPostsQueryResult[number] }) {
               src={urlFor(post.coverImage).url()}
               alt={post.coverImage.alt || post.title || "Post cover image"}
               fill
+              priority
               className="object-contain group-hover:scale-105 transition-all duration-300"
             />
           </div>

@@ -22,9 +22,9 @@ function useMembershipTier() : MembershipLevel | null {
   const router = useRouter();
 
   
-  const hasBackstageContent = useSchematicFlag('backstage-content'); 
-  const hasCrewContent = useSchematicFlag('crew-member-access-content');
-  const hasVIPContent = useSchematicFlag('vip-access-content');
+  const hasRippleContent = useSchematicFlag('ripple-content'); 
+  const hasSunsetCircleContent = useSchematicFlag('sunset-circle-content');
+  const hasElectricCollectiveContent = useSchematicFlag('electric-collective-content');
 
   // Separate useEffect for plan-changed event listener
   useEffect(() => {
@@ -49,9 +49,9 @@ function useMembershipTier() : MembershipLevel | null {
 
   }, [router ]); // Empty dependency array as this only needs to be set up once
 
-  if(hasVIPContent) return 3;
-  if(hasCrewContent) return 2;
-  if(hasBackstageContent) return 1;
+  if(hasElectricCollectiveContent) return 3;
+  if(hasSunsetCircleContent) return 2;
+  if(hasRippleContent) return 1;
 
   return null;  
 }

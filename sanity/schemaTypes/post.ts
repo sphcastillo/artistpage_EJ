@@ -45,9 +45,9 @@ export default defineType({
       description: "Select which membership tiers can access this post",
       options: {
         list: [
-          { title: "Backstage Pass", value: "backstage" },
-          { title: "Crew Member", value: "crew" },
-          { title: "VIP Access", value: "vip" },
+          { title: "Ripple", value: "ripple" },
+          { title: "Sunset Circle", value: "sunsetCircle" },
+          { title: "Electric Collective", value: "electricCollective" },
         ],
       },
       validation: (Rule) => Rule.required(),

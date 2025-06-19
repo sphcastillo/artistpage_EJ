@@ -43,7 +43,7 @@ export async function sendMessage(message: string) {
 
     const newMessage = await adminClient.create({
         _type: "message",
-        senderName: user.fullName,
+        senderName: user.fullName || user.emailAddresses[0].emailAddress,
         senderEmail: user.emailAddresses[0].emailAddress,
         messageBody: message,
     });

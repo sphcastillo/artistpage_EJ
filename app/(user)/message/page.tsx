@@ -21,7 +21,8 @@ export default function MessagePage() {
   const [message, setMessage] = useState("");
   const [isSending, startTransition] = useTransition();
   const schematicIsPending = useSchematicIsPending();
-  const { featureUsageExceeded } = useSchematicEntitlement("send-dm");
+  const { featureUsageExceeded } = useSchematicEntitlement("send-message");
+  console.log("FeatureUsageExceeded", featureUsageExceeded);
 
   const tier = membershipTier ? getTierFromLevel(membershipTier) : null;
   const isVIP = tier === "vip";

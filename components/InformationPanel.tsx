@@ -19,6 +19,7 @@ async function InformationPanel() {
           alt="Logo"
           width={175}
           height={175}
+          priority
           className="w-[175px] h-auto rounded-lg z-50"
         />
       )}

@@ -1,22 +1,22 @@
-export type TierAccess = 'backstage' | 'crew' | 'vip';
+export type TierAccess = 'ripple' | 'sunsetCircle' | 'electricCollective';
 export type MembershipLevel = 1 | 2 | 3;
 
 export interface Membership extends Record<TierAccess, MembershipLevel> {
-    backstage: 1;
-    crew: 2;
-    vip: 3;
+    ripple: 1;
+    sunsetCircle: 2;
+    electricCollective: 3;
 }
 
 export const tierMap: Record<TierAccess, MembershipLevel> = {
-    backstage: 1,
-    crew: 2,
-    vip: 3,
+    ripple: 1,
+    sunsetCircle: 2,
+    electricCollective: 3,
 }
 
 export const membershipMap: Record<MembershipLevel, string> = {
-    1: "Level 1: Backstage Pass",
-    2: "Level 2: Crew Member",
-    3: "Level 3: VIP Access"
+    1: "Level 1: Ripple Membership",
+    2: "Level 2: Sunset Circle",
+    3: "Level 3: Electric Collective"
 }
 
 export const getTierFromLevel = (level: MembershipLevel) : TierAccess => {

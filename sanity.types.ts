@@ -130,7 +130,7 @@ export type Post = {
     _type: "block";
     _key: string;
   }>;
-  tierAccess?: "backstage" | "crew" | "vip";
+  tierAccess?: "ripple" | "sunsetCircle" | "electricCollective";
   coverImage?: {
     asset?: {
       _ref: string;
@@ -289,7 +289,7 @@ export type GetPostQueryResult = {
     _type: "block";
     _key: string;
   }>;
-  tierAccess?: "backstage" | "crew" | "vip";
+  tierAccess?: "electricCollective" | "ripple" | "sunsetCircle";
   coverImage?: {
     asset?: {
       _ref: string;
@@ -351,7 +351,7 @@ export type GetPostsQueryResult = Array<{
     _type: "block";
     _key: string;
   }>;
-  tierAccess?: "backstage" | "crew" | "vip";
+  tierAccess?: "electricCollective" | "ripple" | "sunsetCircle";
   coverImage?: {
     asset?: {
       _ref: string;
@@ -411,7 +411,7 @@ export type GetPostsQueryWithTierResult = Array<{
     _type: "block";
     _key: string;
   }>;
-  tierAccess?: "backstage" | "crew" | "vip";
+  tierAccess?: "electricCollective" | "ripple" | "sunsetCircle";
   coverImage?: {
     asset?: {
       _ref: string;

@@ -13,6 +13,7 @@ async function Loading() {
           alt={siteSettings?.siteTitle || ""}
           width={100}
           height={100}
+          priority
           className="h-32 w-32 rounded-full animate-pulse"
         />
       )}

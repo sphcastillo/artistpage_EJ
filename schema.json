@@ -750,15 +750,15 @@
           "of": [
             {
               "type": "string",
-              "value": "backstage"
+              "value": "ripple"
             },
             {
               "type": "string",
-              "value": "crew"
+              "value": "sunsetCircle"
             },
             {
               "type": "string",
-              "value": "vip"
+              "value": "electricCollective"
             }
           ]
         },

@@ -36,7 +36,7 @@ function MemberButton() {
     return (
       <Link href="/pricing">
         <Button className="bg-blue-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-blue-700 transition-colors">
-          Upgrade to VIP <Heart className="w-4 h-4 fill-white text-white" />
+          Upgrade to Electric Collecetive <Heart className="w-4 h-4 fill-white text-white" />
         </Button>
       </Link>
     );
@@ -46,7 +46,7 @@ function MemberButton() {
     return (
       <Link href="/pricing">
         <Button className="bg-green-500 text-white px-8 py-2 rounded-lg text-base font-semibold hover:bg-green-700 transition-colors">
-          Thanks for being a VIP!{" "}
+          Thanks for being a Electric Collective Member!{" "}
           <Heart className="w-4 h-4 fill-white text-white" />
         </Button>
       </Link>
