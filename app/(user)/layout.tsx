@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <OurSchematicProvider>
-        <body>
+        <body className="bg-[#F9F0F0]">
           <Header />
           {children}
 
