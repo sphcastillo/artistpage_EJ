@@ -38,7 +38,7 @@ export async function sendMessage(message: string) {
     }
 
     if(!feature){
-        throw new Error("User is not a VIP");
+        throw new Error("User is not a Elective Collective Member");
     }
 
     const newMessage = await adminClient.create({

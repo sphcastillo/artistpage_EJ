@@ -25,7 +25,7 @@ export default function MessagePage() {
   console.log("FeatureUsageExceeded", featureUsageExceeded);
 
   const tier = membershipTier ? getTierFromLevel(membershipTier) : null;
-  const isVIP = tier === "vip";
+  const isElectricCollective = tier === "electricCollective";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -71,23 +71,23 @@ export default function MessagePage() {
     );
   }
 
-  if (!isVIP) {
+  if (!isElectricCollective) {
     return (
       <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-t from-gray-50 to-white flex items-center justify-center">
         <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 text-center">
           <div className="mb-6 bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
             <LockIcon className="w-8 h-8 text-gray-500" />
           </div>
-          <h1 className="text-2xl font-bold mb-2">VIP Access Required</h1>
+          <h1 className="text-2xl font-bold mb-2">Electric Collective Membership Required</h1>
           <p className="text-gray-600 mb-6">
             Direct messaging to the creator is a premium feature available
-            exclusively to VIP members.
+            exclusively to Electric Collective Member.
           </p>
           <Button
             asChild
             className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700"
           >
-            <Link href="/pricing">Upgrade to VIP</Link>
+            <Link href="/pricing">Upgrade to Electric Collective Membership</Link>
           </Button>
         </div>
       </div>
@@ -102,11 +102,10 @@ export default function MessagePage() {
           <div className="p-6 sm:p-8 bg-gradient-to-r from-indigo-500 to-purple-600">
             <div className="flex items-center gap-3 text-white mb-2">
               <MessageCircleIcon className="w-6 h-6" />
-              <h1 className="text-2xl font-bold">Direct Message to Creator</h1>
+              <h1 className="text-2xl font-bold">Direct Message to Erin Jade</h1>
             </div>
             <p className="text-indigo-100">
-              As a VIP member, you can send direct messages to the creator. The
-              creator may choose to respond via your email address.
+              As an Elective Collectivve member, you can send direct messages to the Erin Jade. Erin Jade may choose to respond via your email address.
             </p>
           </div>
 

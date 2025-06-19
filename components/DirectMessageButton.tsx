@@ -25,8 +25,7 @@ function DirectMessageButton() {
 
   const tier = membershipTier ? getTierFromLevel(membershipTier) : null;
 
-  if (tier === "vip") {
-    // VIPs can DM the creator
+  if (tier === "electricCollective") {
     return (
       <Button
         className="flex items-center gap-2 transition-all hover:bg-primary/90"
@@ -41,7 +40,6 @@ function DirectMessageButton() {
   }
 
   return (
-    // Non-VIP users see locked button with upgrade tooltip
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
@@ -51,7 +49,7 @@ function DirectMessageButton() {
           </div>
         </TooltipTrigger>
         <TooltipContent className="p-4">
-          <p className="text-sm mb-2">Upgrade to Electric Collective to message the creator</p>
+          <p className="text-sm mb-2">Upgrade to Electric Collective to message Erin Jade</p>
           <Button
             size="sm"
             className="w-full text-xs"
